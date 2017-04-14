@@ -21,15 +21,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package io.github.connorhartley.formulate;
+package io.github.connorhartley.formulate.util;
 
-public class FormulateInfo {
+public enum Display {
 
-    private FormulateInfo() {}
-
-    public static final String ID = "@id@";
-    public static final String NAME = "@name@";
-    public static final String VERSION = "@version@";
-    public static final String DESCRIPTION = "@description@";
+    LEFT,
+    RIGHT,
+    CENTER,
+    INBETWEEN
 
 }

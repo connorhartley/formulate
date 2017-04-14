@@ -21,15 +21,44 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package io.github.connorhartley.formulate;
+package io.github.connorhartley.formulate.form;
 
-public class FormulateInfo {
+import io.github.connorhartley.formulate.element.FormElement;
+import io.github.connorhartley.formulate.element.item.ElementItem;
+import org.spongepowered.api.text.Text;
 
-    private FormulateInfo() {}
+public class Form<T> {
 
-    public static final String ID = "@id@";
-    public static final String NAME = "@name@";
-    public static final String VERSION = "@version@";
-    public static final String DESCRIPTION = "@description@";
+    public Form(Builder<T> builder) {}
+
+    public Builder builder() {
+        return new Builder<T>();
+    }
+
+    public static class Builder<T> {
+
+        public Builder() {}
+
+        public Builder id(String id) {
+            return this;
+        }
+
+        public Builder padding(Text padding) {
+            return this;
+        }
+
+        public Builder template(Class<T> template) {
+            return this;
+        }
+
+        public Builder element(FormElement<T, ElementItem<T>> element) {
+            return this;
+        }
+
+        public Form<T> build() {
+            return new Form<>(this);
+        }
+
+    }
 
 }

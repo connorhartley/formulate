@@ -13,9 +13,7 @@ There many ways to contribute to the project. Some being...
 
 - Creating issues for reporting bugs.
 
-- Creating issues for reporting new cheats that are not detected or new features.
-
-- Contributing to the plugin by making a pull request.
+- Contributing to the library by making a pull request.
 
 Developers:
 

@@ -21,15 +21,26 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package io.github.connorhartley.formulate;
+package io.github.connorhartley.formulate.element;
 
-public class FormulateInfo {
+import io.github.connorhartley.formulate.element.item.ElementItem;
+import io.github.connorhartley.formulate.util.Display;
+import org.spongepowered.api.text.Text;
 
-    private FormulateInfo() {}
+import java.util.Collection;
 
-    public static final String ID = "@id@";
-    public static final String NAME = "@name@";
-    public static final String VERSION = "@version@";
-    public static final String DESCRIPTION = "@description@";
+public interface FormElement<T, I extends ElementItem<T>> {
+
+    Text getName();
+
+    I getItem();
+
+    int getWidth();
+
+    int getPosition();
+
+    Display getDisplay();
+
+    Collection<T> getTemplates();
 
 }

@@ -21,15 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package io.github.connorhartley.formulate;
+package io.github.connorhartley.formulate.element.item;
 
-public class FormulateInfo {
+import io.github.connorhartley.formulate.element.FormElement;
+import io.github.connorhartley.formulate.template.OrderTemplate;
 
-    private FormulateInfo() {}
+public abstract class AbstractOrderedItem<F extends FormElement<OrderTemplate, ElementItem<OrderTemplate>>> implements ElementItem<OrderTemplate> {
 
-    public static final String ID = "@id@";
-    public static final String NAME = "@name@";
-    public static final String VERSION = "@version@";
-    public static final String DESCRIPTION = "@description@";
+    private final F formElement;
+    private int index;
+
+    public AbstractOrderedItem(F formElement, int initialIndex) {
+        this.formElement = formElement;
+        this.index = initialIndex;
+    }
+
+    public int getIndex() {
+        return this.index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
 
 }
