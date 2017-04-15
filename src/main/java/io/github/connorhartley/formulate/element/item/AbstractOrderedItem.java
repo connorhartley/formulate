@@ -24,9 +24,9 @@
 package io.github.connorhartley.formulate.element.item;
 
 import io.github.connorhartley.formulate.element.FormElement;
-import io.github.connorhartley.formulate.template.OrderTemplate;
+import io.github.connorhartley.formulate.template.OrderedTemplate;
 
-public abstract class AbstractOrderedItem<F extends FormElement<OrderTemplate, ElementItem<OrderTemplate>>> implements ElementItem<OrderTemplate> {
+public abstract class AbstractOrderedItem<F extends FormElement<OrderedTemplate, AbstractOrderedItem<F>>> implements ElementItem<OrderedTemplate> {
 
     private final F formElement;
     private int index;

@@ -23,5 +23,5 @@
  */
 package io.github.connorhartley.formulate.template;
 
-public interface OrderTemplate {
+public interface OrderedTemplate {
 }

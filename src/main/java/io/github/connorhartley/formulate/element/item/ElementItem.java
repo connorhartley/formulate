@@ -27,9 +27,9 @@ import org.spongepowered.api.text.Text;
 
 public interface ElementItem<T> {
 
-    Text getName();
+    Text getActions();
 
-    int getPosition(boolean absoloute);
+    int getPosition(boolean absolute);
 
     T getTemplate();
 

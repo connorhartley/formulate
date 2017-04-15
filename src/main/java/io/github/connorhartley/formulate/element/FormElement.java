@@ -33,14 +33,18 @@ public interface FormElement<T, I extends ElementItem<T>> {
 
     Text getName();
 
-    I getItem();
+    Collection<I> getItems();
+
+    int getIndex();
 
     int getWidth();
+
+    int getHeight();
 
     int getPosition();
 
     Display getDisplay();
 
-    Collection<T> getTemplates();
+    T getTemplate();
 
 }

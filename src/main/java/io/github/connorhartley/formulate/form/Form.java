@@ -25,17 +25,18 @@ package io.github.connorhartley.formulate.form;
 
 import io.github.connorhartley.formulate.element.FormElement;
 import io.github.connorhartley.formulate.element.item.ElementItem;
+import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.text.Text;
 
-public class Form<T> {
+public class Form {
 
-    public Form(Builder<T> builder) {}
+    public Form(Builder builder) {}
 
-    public Builder builder() {
-        return new Builder<T>();
+    public static Builder builder() {
+        return new Builder();
     }
 
-    public static class Builder<T> {
+    public static class Builder {
 
         public Builder() {}
 
@@ -47,16 +48,16 @@ public class Form<T> {
             return this;
         }
 
-        public Builder template(Class<T> template) {
+        public Builder element(FormElement<?, ElementItem<?>> element) {
             return this;
         }
 
-        public Builder element(FormElement<T, ElementItem<T>> element) {
+        public Builder player(Player player) {
             return this;
         }
 
-        public Form<T> build() {
-            return new Form<>(this);
+        public Form build() {
+            return new Form(this);
         }
 
     }

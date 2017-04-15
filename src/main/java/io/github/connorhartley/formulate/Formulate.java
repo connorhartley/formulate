@@ -31,8 +31,8 @@ public class Formulate {
 
     private Formulate() {}
 
-    public <T> Form.Builder getFormBuilder() {
-        return new Form.Builder<T>();
+    public Form.Builder getFormBuilder() {
+        return Form.builder();
     }
 
 }
